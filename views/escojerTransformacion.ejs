@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Server Data</title>
+</head>
+<body>
+  <h1>SELECCIONAR LA TRANSFORMACION</h1>
+    <h3>Los campos seleccionados son de la tabla <%=TABLE_NAME  %>: </h3>
+    <ol>
+        <% if (Array.isArray(columnas)) { %>
+            <% columnas.forEach(campo => { %>
+                <li><%= campo %></li>
+            <% }); %>
+        <% } else { %>
+            <li><%= columnas %></li>
+        <% } %>
+        
+
+    </ol>
+    <h4>OPERACION A REALIZAR: </h4>
+        <ul>
+            <li><a href="">Convertir el valor del campo a minúscula</a></li>
+            <li><a href="">Convertir el valor del campo a mayúscula</a></li>
+            <li>El campo es Fecha obtener:</li>
+                <ul>
+                    <li><a href="">AÑO</a></li>
+                    <li><a href="">MES</a></li>
+                    <li><a href="">DIA</a></li>
+                    <li><a href="">HORA</a></li>
+                </ul>
+            
+            <li><a href="">Concatenar esos valor</a></li>
+            <li><a href="">DEFAULT</a></li>
+            
+        </ul>
+</body>
+</html>
